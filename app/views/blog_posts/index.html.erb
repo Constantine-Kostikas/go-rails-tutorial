@@ -1,0 +1,11 @@
+Hello world.
+
+<% @blog_all.each do |post| %>
+
+<!--  Route Generated from named Route-->
+  <p> <%= link_to post.title,  post %></p>
+  <div> <%=  post.title %> </div>
+  <div> <%=  post.body %> </div>
+<% end %>
+
+<%#= link_to "Back", :back %>

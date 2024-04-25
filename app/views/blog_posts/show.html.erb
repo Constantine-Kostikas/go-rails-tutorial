@@ -1,0 +1,7 @@
+
+<p>Blog Show</p>
+<p><%= @blog_post.title %></p>
+<p><%= @blog_post.body %></p>
+
+<%= link_to "Back", :back %>
+<%= link_to "Edit", edit_blog_post_path(@blog_post) if user_signed_in? %>
