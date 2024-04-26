@@ -3,8 +3,21 @@ Hello world.
 <% @blog_all.each do |post| %>
 
 <!--  Route Generated from named Route-->
-  <p> <%= link_to post.title,  post %></p>
-  <div> <%=  post.title %> </div>
+
+  <div> <%= link_to post.title,  post %>
+    <% if post.draft?  %>
+      <div class="bg-gray-100 p-2 rounded text-gray-900">Draft</div>
+      <% else if post.scheduled? %>
+        <div class="bg-blue-100 p-2 rounded text-gray-900">Scheduled</div>
+      <% else %>
+          <div class="bg-green-100 p-2 rounded text-gray-900">Published</div>
+      <% end %>
+  </div>
+
+
+
+    <% end %>
+
   <div> <%=  post.body %> </div>
 <% end %>
 
