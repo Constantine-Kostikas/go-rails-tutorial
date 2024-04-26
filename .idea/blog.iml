@@ -88,6 +88,7 @@
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.7.1, rbenv: 3.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.16.4, rbenv: 3.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.5.0, rbenv: 3.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pagy (v8.3.0, rbenv: 3.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="parallel (v1.24.0, rbenv: 3.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="parser (v3.3.0.5, rbenv: 3.3.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v1.5.6, rbenv: 3.3.1) [gem]" level="application" />

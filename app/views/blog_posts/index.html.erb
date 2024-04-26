@@ -20,5 +20,9 @@ Hello world.
 
   <div> <%=  post.content %> </div>
 <% end %>
+<div class="mt-16 mb-16 justify-between">
+  <%== pagy_nav(@pagy) %>
+</div>
+
 
 <%#= link_to "Back", :back %>
