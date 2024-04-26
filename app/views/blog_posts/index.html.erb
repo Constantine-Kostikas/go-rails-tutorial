@@ -21,6 +21,7 @@ Hello world.
   <div> <%=  post.content %> </div>
 <% end %>
 <div class="mt-16 mb-16 justify-between">
+  <% console unless ENV["RAILS_ENV"] == "production"  %>
   <%== pagy_nav(@pagy) %>
 </div>
 

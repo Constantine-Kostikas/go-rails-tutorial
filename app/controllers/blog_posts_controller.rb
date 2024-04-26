@@ -6,6 +6,9 @@ class BlogPostsController < ApplicationController
   def index
     @blog_all =  user_signed_in? ? BlogPost.sorted : BlogPost.published
     @pagy, @blog_all = pagy(@blog_all)
+  rescue Pagy::OverflowError
+    flash[:notice] = 'Alert: Invalid page'
+    redirect_to root_path(page: 1)
   end
 
   def new
