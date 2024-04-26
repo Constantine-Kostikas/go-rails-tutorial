@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   #
   get "up" => "rails/health#show", as: :rails_health_check
 
-  resources :blog_posts
+  resources :blog_posts do
+    resource :cover_image, only: [:destroy], module: :blog_posts
+  end
   # get "/blog_posts/new", to: "blog_posts#new", as: :new_blog_post
   # get "/blog_posts/:id", to: "blog_posts#show", as: :blog_post
   # patch "/blog_posts/:id", to: "blog_posts#update"

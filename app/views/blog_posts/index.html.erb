@@ -5,6 +5,7 @@ Hello world.
 <!--  Route Generated from named Route-->
 
   <div> <%= link_to post.title,  post %>
+    <%= image_tag post.cover_image , class: "w-1/3" if post.cover_image.present?%>
     <% if post.draft?  %>
       <div class="bg-gray-100 p-2 rounded text-gray-900">Draft</div>
       <% else if post.scheduled? %>

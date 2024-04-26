@@ -1,5 +1,6 @@
 
 <p>Blog Show</p>
+<%= image_tag @blog_post.cover_image if @blog_post.cover_image.present?%>
 <p><%= @blog_post.title %></p>
 <p><%= @blog_post.content %></p>
 <p><%= @blog_post.published_at %></p>

@@ -1,4 +1,4 @@
-<%= form_with model: @blog_post do |form| %>
+<%= form_with model: blog_post do |form| %>
 
   <% if form.object.errors.any? %>
     <div>
@@ -12,6 +12,18 @@
   <div>
     <%= form.label :title %>
     <%= form.text_field :title %>
+  </div>
+
+  <% if blog_post.cover_image.present? %>
+    <div id="<%= dom_id(blog_post, :cover_image) %>">
+      <%= image_tag blog_post.cover_image, class: "w-1/4" if blog_post.cover_image.present? %>
+      <%= link_to "Remove Cover Image", blog_post_cover_image_path(blog_post), data: { turbo_method: :delete, turbo_confirm: "Are you sure"} %>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :cover_image %>
+    <%= form.file_field :cover_image %>
   </div>
 
   <div>
